@@ -1,0 +1,120 @@
+/*** Settings ***/
+@import "nib"
+@import "../lib/css/css"
+
+global-reset();
+reset-html5();
+form-reset();
+b
+strong
+i
+em
+	font-style normal
+	font-weight normal
+
+$transitionAnimation = cubic-bezier(0.250, 0.460, 0.450, 0.940)
+
+/* fonts */
+@font-face
+	font-family "Circe"
+	src url("../fonts/Circe.woff") format("woff")
+
+@font-face
+	font-family "CirceBold"
+	src url("../fonts/CirceBold.woff") format("woff")
+
+@font-face
+	font-family "CirceExtraBold"
+	src url("../fonts/CirceExtraBold.woff") format("woff")
+
+@font-face
+	font-family "CirceExtraLight"
+	src url("../fonts/CirceExtraLight.woff") format("woff")
+
+@font-face
+	font-family "CirceLight"
+	src url("../fonts/CirceLight.woff") format("woff")
+
+@font-face
+	font-family "CirceThin"
+	src url("../fonts/CirceThin.woff") format("woff")
+/* //fonts */
+
+html
+	height 100%
+body
+	position relative
+	width 100%
+	height 100%
+	min-height 100vh
+	max-height 100vh
+	line-height 1
+	cursor default
+	font-family "Circe"
+
+	color $colorLightBlack
+
+	transition opacity 0.3s $transitionAnimation
+
+.page-content
+	position fixed
+	top 0
+	left 0
+	right 0
+	bottom 0
+	display block
+	width 100%
+	height 100vh
+	min-height 100vh
+	max-height 100vh
+	padding 2%
+	box-sizing border-box
+
+.page-inner
+	width 100%
+	min-height 100%
+	max-height 100%
+	margin 0 auto
+	display flex
+	justify-content space-between
+
+.title
+	display block
+	width 150px
+
+	margin 0 auto 2% auto
+
+	svg
+		display block
+		width 100%
+
+.reveal.main-slider
+	height 100%
+
+	.main-slider-item
+		max-height 100%
+		height 100%
+		padding 0
+
+.slider-img
+.slider-text
+	width 50%
+
+.slider-text
+	min-height 100%
+	background #f3f3f3
+
+.slider-img
+	position relative
+
+	img
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		display block
+		width 100%
+		height 100%
+
+		object-fit cover
