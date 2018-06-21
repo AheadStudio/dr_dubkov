@@ -23,7 +23,7 @@
 							controls: false,
 							history: true,
 							help: false,
-							transition: "concave",
+							transition: "fade",
 							transitionSpeed: "slow",
 							loop: false,
 							keyboard: true
@@ -45,7 +45,7 @@
 								$newPoint.on("click", function() {
 									var el = $(this),
 										numberSlide = Number(el.data("slide").replace("slide_", ""));
-										
+
 									Reveal.slide(1, numberSlide-1);
 
 									Reveal.addEventListener("slidechanged", function( event ) {
@@ -106,7 +106,17 @@
 									Reveal.next();
 								}
 
-							})
+							});
+
+							$sel.window.mousewheel(function(event) {
+								if (event.deltaY == "-1") {
+									Reveal.next();
+								}
+								if (event.deltaY == "1") {
+									Reveal.prev();
+								}
+							});
+							
 						});
 					} else {
 						var $mainBlock = $(".reveal");
