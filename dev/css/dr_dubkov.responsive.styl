@@ -1,166 +1,99 @@
-// Menu burger
-.menu-burger
-	position absolute
-	left 0
-	top 14px
-	z-index 1000
-	
-	display block
-	width 30px
-	height 25px
-
-	cursor pointer
-	
-	.menu-burger-inner
-		position absolute
-		left 0
-		top 50%
-		margin-top -2px
-
-		width 100%
-		height 4px
-		
-		border-radius 4px
-		background-color red
-		
-		transition opacity 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
-	
-	&:before
-	&:after
-		content ""
-		
-		position absolute
-		left 0
-		
-		display block
-		width 100%
-		height 4px
-		
-		border-radius 4px
-		background-color red
-		
-		transition transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
-		
-	&:before
-		top 0
-		
-	&:after
-		bottom 0
-		
-	&.active
-		.menu-burger-inner
-			opacity 0
-
-		&:before
-			transform rotate(-45deg) translateY(10px) translateX(-5px)
-			
-		&:after
-			transform rotate(45deg) translateY(-10px) translateX(-5px)
-		
-.menu-overlay
-	position fixed
-	z-index 10
-	left 0
-	top 0
-	right 0
-	bottom 0
-	
-	display none
-
-.show-menu
-	.menu-overlay
-		display block
-// //Menu burger
-
-
-
-// Scroll
-.mobile-scroll-holder
-	overflow-x scroll
-	overflow-y hidden
-	
-	.mobile-scroll
-		white-space nowrap
-	
-	&::-webkit-scrollbar
+@media screen and (max-width: 999px)
+	.slider-arrow
 		display none
-// //Scroll
 
+	.slider-point
+		display none
 
-
-// Adaptive table
-.adaptive-table
-	display block
-	
-	thead
-	tbody
-	tfoot
-	tr
-	th
-	td
-		display block
-		
-	thead
-		tr
-			position absolute
-			left -9999px
-			top -9999px
-			
-	td
-		position relative
-		
-		padding-left 50%
-		
-		&:before
-			content attr(data-header)
-
-			position absolute
-			left 6px
-			top 6px
-			
-			width 45%
-			padding-right 5%
-			
-			white-space nowrap
-// //Adaptive table
-
-
-
-// Panels
-.panel-title
-	cursor pointer
-	
-.panel-content
-	display none
-	
-	&.active
-		display block
-// //Panels
-
-
-
-// Aside
-.page
-	overflow hidden
-
-.page-content
-	transition transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
-		
-.header-menu
-	position absolute
-	z-index 20
-	left 0
-	top 0
-
-	transform translateX(-100%)
-	
-	transition transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
-
-body.show-menu
-	.header-menu
-		transform translateX(0)
-		
 	.page-content
-		transform translateX(200px)
-// //
-	
+		position inherit
+		height 100%
+		min-height 100%
+		max-height 100%
+		overflow auto
+
+	.main-slider-item
+		height 100vh
+		margin-bottom 50px
+
+	.slider-text-container
+		padding 50px
+		.name
+			max-width 195px
+			margin 50px auto 20px auto
+			svg
+				display block
+				width 100%
+	.map
+		width 100%
+		height 100%
+
+	.page-text
+		h1
+			font-size 26px
+			line-height 36px
+
+		h2
+			padding-left 10px
+			font-size 18px
+			line-height 32px
+		p
+			margin-top 30px
+			font-size 14px
+			line-height 20px
+
+	.location
+		position relative
+		font-size 18px
+		line-height 28px
+
+	.instagram
+		position relative
+		left 50%
+		margin-left -63px
+@media screen and (max-width: 830px)
+	.page-inner
+		flex-flow column
+
+	.main-slider-item
+		height auto
+
+	.slider-text
+		width 100%
+		min-height 370px
+		.name
+			margin 20px auto 20px auto
+	.slider-img
+		width 100%
+		min-height 600px
+
+	.page-text
+		h1
+			font-size 22px
+			line-height 26px
+
+		h2
+			padding-left 10px
+			font-size 16px
+			line-height 32px
+		p
+			margin-top 30px
+			font-size 14px
+			line-height 20px
+
+	.map-container
+		height 500px
+
+@media screen and (max-width: 600px)
+	.page-content
+		padding 20px
+
+	.main-slider-item
+		margin-bottom 30px
+
+@media screen and (max-width: 400px)
+	.slider-text-container
+		padding 20px
+
+	.page-content
+		padding 20px 0

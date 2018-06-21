@@ -51,19 +51,18 @@ html(lang="ru", class="no-js", prefix="og:http://ogp.me/ns#")
 				media: "screen",
 				href: "../css/" + info.code + ".css",
 				noCache: true
+			}, {
+				media: "screen",
+				href: "../css/" + info.code + ".responsive.css",
+				noCache: true
 			}
 		])
 
 	body(itemscope, itemtype="http://schema.org/WebPage")
 
 		div(class="page")
-			header(class="page-header", itemscope, itemtype="http://schema.org/WPHeader")
-
-
 			main(class="page-content")
 				block content
-
-		footer(class="page-footer", itemscope, itemtype="http://schema.org/WPFooter")
 
 
 		+addJS([
@@ -71,6 +70,8 @@ html(lang="ru", class="no-js", prefix="og:http://ogp.me/ns#")
 				src: "http://code.jquery.com/jquery-3.2.1.min.js"
 			}, {
 				src: "../js/plugins/reveal.js"
+			}, {
+				src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDOtcx9Sm_hunFMGzh4eqe_XRkFUYMWIao&amp;sensor=true"
 			}, {
 				src: "../js/" + info.code + ".js"
 			}

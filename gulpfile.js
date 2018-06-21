@@ -98,7 +98,7 @@ settings.paths = paths;
 
 
 
-/*** SEND EMAIL NOTIFICATIONS ***/
+/*** SEND EMAIL NOTIFICATIONS **
 gulp.task("mail", function(params) {
 	var mailgun = require("mailgun-js")({
 		apiKey: "key-3b0b10d9337c3dd5c31b363e74ab18d8",

@@ -6,65 +6,65 @@ block content
         
     div(class="reveal main-slider")
         div(class="slides main-slider-container")
-            section(id="slide_1", class="main-slider-item")
-                div(class="page-inner")
-                    div(class="slider-text")
-                        div(class="name")
-                            include ../../prod/svg/logo_full.svg
-                        div(class="desc") dental care
-                        div(class="text") Авторская клиника 
-                            br
-                            | эстетической стоматологии 
-                            br
-                            | доктора
-                            br
-                            | Александра Дубкова
-                    div(class="slider-img")    
-                        img(src="../dummy/slide_1.jpg", alt="Первый слайд")
-            section(id="slide_2",class="main-slider-item")
-                div(class="page-inner")
-                    div(class="slider-text")
-                        div(class="name")
-                            include ../../prod/svg/logo_full.svg
-                        div(class="desc") dental care
-                        div(class="text") Авторская клиника 
-                            br
-                            | эстетической стоматологии 
-                            br
-                            | доктора
-                            br
-                            | Александра Дубкова
-                    div(class="slider-img")    
-                        img(src="../dummy/slide_1.jpg", alt="Первый слайд")
-            section(id="slide_3",class="main-slider-item")
-                div(class="page-inner")
-                    div(class="slider-text")
-                        div(class="name")
-                            include ../../prod/svg/logo_full.svg
-                        div(class="desc") dental care
-                        div(class="text") Авторская клиника 
-                            br
-                            | эстетической стоматологии 
-                            br
-                            | доктора
-                            br
-                            | Александра Дубкова
-                    div(class="slider-img")    
-                        img(src="../dummy/slide_1.jpg", alt="Первый слайд")
-            section(id="slide_4",class="main-slider-item")
-                div(class="page-inner")
-                    div(class="slider-text")
-                        div(class="name")
-                            include ../../prod/svg/logo_full.svg
-                        div(class="desc") dental care
-                        div(class="text") Авторская клиника 
-                            br
-                            | эстетической стоматологии 
-                            br
-                            | доктора
-                            br
-                            | Александра Дубкова
-                    div(class="slider-img")    
-                        img(src="../dummy/slide_1.jpg", alt="Первый слайд")
-                
-        
+            section(class="main-slider-section")
+                section(id="slide_1", class="main-slider-item")
+                    div(class="page-inner")
+                        div(class="slider-text page-text")
+                            div(class="slider-text-container")
+                                div(class="name")
+                                    include ../../prod/svg/logo_full.svg
+                                h1 Авторская клиника 
+                                    br
+                                    | эстетической стоматологии 
+                                    br
+                                    | доктора
+                                    br
+                                    | Александра Дубкова
+                        div(class="slider-img")    
+                            img(src="../dummy/slide_1.jpg", alt="Первый слайд")
+                                
+                section(id="slide_2", class="main-slider-item")
+                    div(class="page-inner page-inner--reverse")
+                        div(class="slider-text page-text")
+                            div(class="slider-text-container")
+                                h1(class="left") Меня зовут Александр 
+                                    br
+                                    | и я врач! 
+                                p Да, это профессия-призвание, а не пустой звук. Поэтому не нужно удивляться, что у крутых специалистов слишком дорогой приём. На своё образование в год я трачу более 1 миллиона рублей. Акции, скидки — это не про мою клинику: я специалист, а не сетевой магазин. Пациентам важно получить грамотную медицинскую помощь или я не прав?
+                                    | Если вижу во взгляде пофигизм и лишь вопрос о стоимости, но никак ни о виде конструкции, материале для изготовления, методе работы и т.д., я скорее откажусь от работы. Для меня клиника — это мой дом, который ещё приносит и доход. 
+                                    | Поэтому к своей работе отношусь с особым трепетом, и как бы не звучало избито, но счастливая улыбка пациента — это настоящий допинг.
+                        div(class="slider-img")    
+                            img(src="../dummy/slide_2.jpg", alt="Второй слайд")
+                            div(class="quote") «Либо ты профессионал, либо иди учись» (с).
+                            
+                section(id="slide_3", class="main-slider-item")
+                    div(class="page-inner")
+                        div(class="slider-text page-text")
+                            div(class="slider-text-container")
+                                h1(class="left") Имлантация
+                                h1(class="left") Эстетическая реставрация
+                                h1(class="left") Все виды протезирования
+                                h1(class="left") Отродонтия
+                                h2 - лечение брекет системами
+                                h2 - лечение ортодонтическими каппами
+                                h1(class="left") Парадантология
+
+                        div(class="slider-img")    
+                            img(src="../dummy/slide_3.jpg", alt="Второй слайд")
+                            
+                section(id="slide_4", class="main-slider-item")
+                    div(class="page-inner page-inner-reverse")
+                        div(class="slider-text map-container")
+                            div(id="mapGoogle", class="map", data-lat="55.6721487", data-lng="37.7461284", data-zoom="13")
+                        div(class="slider-text page-text")
+                            div(class="slider-text-container")
+                                div(class="location")
+                                    div(class="city ") Москва,
+                                    div(class="street") пр. 40 лет Октября, 40
+                                    a(href="tel:+74952560303", class="link link--opacity link-black") +7 (495) 256-03-03
+                                a(href="#", class="link link--opacity link-black instagram") @dr.dubkov
+    
+    button(class="slider-arrow")        
+        include ../../prod/svg/arrow.svg
+    
+    div(class="slider-point")
