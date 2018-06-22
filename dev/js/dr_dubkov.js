@@ -49,21 +49,11 @@
 									Reveal.slide(1, numberSlide-1);
 
 									Reveal.addEventListener("slidechanged", function( event ) {
-										var firstSlide = Reveal.isFirstSlide(),
-											lastSlide = Reveal.isLastSlide();
-
-										if (lastSlide) {
-											$(".slider-arrow").css("transform", "rotate(180deg)")
-											$(".slider-arrow").addClass("back");
-										}
-										if (firstSlide) {
-											$(".slider-arrow").css("transform", "rotate(0)")
-											$(".slider-arrow").removeClass("back");
-										}
+										self.checkNumberSlide();
 									});
 								});
 							}
-
+							self.checkNumberSlide();
 
 							Reveal.addEventListener("slidechanged", function( event ) {
 								var currentSlide = $(Reveal.getCurrentSlide()).attr("id"),
@@ -81,23 +71,14 @@
 									}
 								})
 
+								self.checkNumberSlide();
 							});
 
 							$(".slider-arrow").on("click", function() {
 								var button = $(this);
 
 								Reveal.addEventListener("slidechanged", function( event ) {
-									var firstSlide = Reveal.isFirstSlide(),
-										lastSlide = Reveal.isLastSlide();
-
-									if (lastSlide) {
-										button.css("transform", "rotate(180deg)")
-										button.addClass("back");
-									}
-									if (firstSlide) {
-										button.css("transform", "rotate(0)")
-										button.removeClass("back");
-									}
+									self.checkNumberSlide();
 								});
 
 								if (button.hasClass("back")) {
@@ -108,7 +89,7 @@
 
 							});
 
-							$sel.window.mousewheel(function(event) {
+							$sel.window.on("mousewheel", function(event) {
 								if (event.deltaY == "-1") {
 									Reveal.next();
 								}
@@ -116,12 +97,31 @@
 									Reveal.prev();
 								}
 							});
+
+							$(".map-container").on("mousewheel", function(event) {
+								event.stopPropagation();
+								event.preventDefault();
+							});
 							
 						});
 					} else {
 						var $mainBlock = $(".reveal");
 
 						$mainBlock.removeClass("reveal");
+					}
+				},
+
+				checkNumberSlide: function() {
+					var firstSlide = Reveal.isFirstSlide(),
+						lastSlide = Reveal.isLastSlide();
+
+					if (lastSlide) {
+						$(".slider-arrow").css("transform", "rotate(180deg)")
+						$(".slider-arrow").addClass("back");
+					}
+					if (firstSlide) {
+						$(".slider-arrow").css("transform", "rotate(0)")
+						$(".slider-arrow").removeClass("back");
 					}
 				}
 
